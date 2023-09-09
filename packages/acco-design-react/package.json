@@ -1,0 +1,21 @@
+{
+  "name": "@acco-design/react",
+  "version": "0.0.1",
+  "description": "Acco Design components for react",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "typings": "types/index.d.ts",
+  "license": "MIT",
+  "files": [
+    "esm",
+    "lib",
+    "types",
+    "README.md"
+  ],
+  "scripts": {},
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "dependencies": {}
+}

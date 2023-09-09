@@ -1,0 +1,20 @@
+{
+  "name": "@acco-design/hooks",
+  "version": "0.0.1",
+  "description": "Collection of common react hooks library",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "types": "types/index.d.ts",
+  "license": "MIT",
+  "files": [
+    "types",
+    "lib",
+    "esm",
+    "README.md"
+  ],
+  "scripts": {},
+  "peerDependencies": {
+    "react": "^16.8.0  || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0  || ^17.0.0 || ^18.0.0"
+  }
+}

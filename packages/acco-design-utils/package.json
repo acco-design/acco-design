@@ -1,0 +1,17 @@
+{
+  "name": "@acco-design/utils",
+  "version": "0.0.1",
+  "description": "Collection of common JavaScript / TypeScript utils",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "typings": "types/index.d.ts",
+  "license": "MIT",
+  "files": [
+    "esm",
+    "lib",
+    "types",
+    "README.md"
+  ],
+  "scripts": {},
+  "dependencies": {}
+}

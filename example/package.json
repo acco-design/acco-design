@@ -1,0 +1,8 @@
+{
+  "name": "@acco-design/example",
+  "version": "0.0.1",
+  "description": "Show acco-design example of components.",
+  "scripts": {
+    "start": "vite"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "acco-design",
+  "private": true,
+  "packageManager": "pnpm@8.7.0",
+  "scripts": {
+    "lint:fix": "eslint scripts/ {example,packages}/**/src --fix --cache --quiet --ext .js,.jsx,.ts,.tsx",
+    "lint:css": "stylelint --fix {example,packages}/**/src/*.{css,less}",
+    "postinstall": "simple-git-hooks",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged --concurrent false",
+    "commit-msg": "pnpm exec tsx scripts/verify-commit.ts $1"
+  },
+  "lint-staged": {
+    "{example,packages}/**/src/*.{json,yaml,md}": [
+      "prettier --write --cache --ignore-unknown"
+    ],
+    "{example,packages}/**/src/*.{ts?(x),js?(x)}": [
+      "eslint --cache --fix"
+    ],
+    "{example,packages}/**/src/*.{css,less}": [
+      "stylelint --cache --fix"
+    ]
+  },
+  "devDependencies": {
+    "@antfu/eslint-config-react": "^0.41.0",
+    "@types/node": "^20.6.0",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.4",
+    "eslint": "^8.49.0",
+    "lint-staged": "^14.0.1",
+    "picocolors": "^1.0.0",
+    "prettier": "^3.0.3",
+    "simple-git-hooks": "^2.9.0",
+    "stylelint": "^15.10.3",
+    "stylelint-config-recess-order": "^4.3.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-stylistic": "^0.4.3",
+    "tsx": "^3.12.8",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9"
+  }
+}
